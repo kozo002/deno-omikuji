@@ -8,7 +8,7 @@ const fortunes = [
 addEventListener('fetch', (event) => {
   const fortune = fortunes[Math.floor(Math.random() * fortunes.length)]
   const response = new Response(fortune, {
-    headers: { "content-type": "text/plain" },
+    headers: { "content-type": "text/plain charset=UTF-8" },
   });
   event.respondWith(response);
 })
