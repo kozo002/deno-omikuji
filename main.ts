@@ -15,6 +15,7 @@ addEventListener('fetch', (event) => {
       </head>
       <body>
         <h1>${fortune}</h1>
+        <script src="/client.js"></script>
       </body>
     </html>
   `
