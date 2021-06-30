@@ -5,7 +5,7 @@ const fortunes = [
   '大凶😈'
 ] as const
 
-addEventListener('fetch', (event) => {
+addEventListener('fetch', (event: any) => {
   const fortune = fortunes[Math.floor(Math.random() * fortunes.length)]
   const html = `
     <html>
@@ -16,6 +16,7 @@ addEventListener('fetch', (event) => {
       <body>
         <h1>${fortune}</h1>
         <script src="/client.js"></script>
+        ${event.request.url}
       </body>
     </html>
   `
